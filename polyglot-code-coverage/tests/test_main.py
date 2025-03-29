@@ -8,10 +8,10 @@ def find_shared_lib():
     runfiles_dir = os.environ.get("RUNFILES_DIR")
     workspace_name = "polyglot_code_coverage"  # Replace with actual workspace name if different
 
-    if runfiles_dir:
-        lib_path = os.path.join(runfiles_dir, workspace_name, "bazel-bin", "src", "main.so")
-    else:
-        lib_path = os.path.abspath(os.path.join("bazel-bin", "src", "main.so"))
+    #if runfiles_dir:
+    #    lib_path = os.path.join(runfiles_dir, workspace_name, "bazel-bin", "src", "main.so")
+    #else:
+    lib_path = os.path.abspath(os.path.join("/workspaces/polyglot-code-coverage/polyglot-code-coverage/bazel-bin", "src", "main.so"))
 
     print("DEBUG: Looking for shared lib at:", lib_path)
     return lib_path
